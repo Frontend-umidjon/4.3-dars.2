@@ -1,0 +1,10 @@
+@mixin df-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+@mixin df-between {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
