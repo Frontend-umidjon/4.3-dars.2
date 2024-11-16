@@ -1,0 +1,99 @@
+.header{
+    margin-top: 40px;
+    border-bottom: 1px solid #E5E5E5;
+    .navbar{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 20px 0;
+        .navbar__logo{  
+            a{
+                font-size: 24px;
+                color: #000;
+                text-decoration: none;
+                font-weight: 700;
+                line-height: 24px;
+                letter-spacing: 3%;
+            }
+        }
+        .navbar__list{
+            display: flex;
+            align-items: center;
+            gap: 48px;
+            .navbar__item{
+                a{
+                    text-decoration: none;
+                    color: #000;
+                    font-size: 16px;
+                    font-weight: 400;
+                    line-height: 24px;
+                    letter-spacing: 3%;
+                }
+                &::after{
+                    content: "";
+                    display: block;
+                    width: 0;
+                    height: 2px;
+                    background: #000;
+                    transition: width .3s;
+                }
+                &:hover{
+                    &::after{
+                        width: 100%;
+                    }
+                }
+            }
+
+        }
+        .navbar__actions{
+            display: flex;
+            align-items: center;
+            gap: 24px;
+            .navbar__actions-search{
+                position: relative;
+
+                input{
+                    border: none;
+                    outline: none;
+                    background:#F5F5F5;
+                    width: 160px;
+                    height: 40px;
+                    padding-left: 20px;
+                    position: relative;
+                    border-radius: 4px;
+                }
+                i{
+                    position: absolute;
+                    right: 20px;
+                    top: 50%;
+                    transform: translateY(-50%);
+                }
+            }
+            .navbar__actions-wishlist{
+                i{
+                    font-size: 20px;
+                }
+            }
+            .navbar__actions-cart{
+                position: relative;
+                i{
+                    font-size: 20px;
+                }
+                .navbar__actions-cart-count{
+                    position: absolute;
+                    top: -10px;
+                    right: -10px;
+                    background: $bg-py;
+                    color: #fff;
+                    border-radius: 50%;
+                    font-size: 12px;
+                    width: 16px;
+                    height: 16px;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                }
+            }
+        }
+    }
+}

@@ -4,3 +4,88 @@
 @import "mixins";
 @import "global";
 @import "header";
+@import "hero";
+@import "flashSale";
+@import "category";
+
+.top{
+    background: #000;
+    height: 48px;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: right;
+    .container__sm{
+        width: 100%;
+
+        
+    }
+    &__content{
+      @include df-center;
+
+    }
+    &__text{
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 21px;
+    }
+    &__link{
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 21px;
+        color: #fff;
+        margin-left: 5px;
+    }
+    &__actions{
+        position: absolute;
+        right: 130px;
+        top: 15px;
+    }
+    &__language-list{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        position: relative;
+        cursor: pointer;
+        margin-left: 230px;
+    }
+    &__language-item{
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 21px;
+        color: #fff;
+        i{
+            color: #fff;
+            margin-left: 5px;
+            transition: all .3s ease;
+        }
+    }
+    &__language-sublist{
+        position: absolute;
+        top: 20px;
+        left: 0;
+        background: #fff;
+        color: #000;
+        display: none;
+    }
+    &__language-subitem{
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 21px;
+        color: #000;
+        i{
+            color: #fff;
+        }
+    }    
+    &__language-item:hover &__language-sublist{
+        display: block;
+    }
+    &__language-subitem:hover{
+        background: #000;
+        color: #fff;
+    }
+    &__language-item:hover i{
+        transition: all .3s ease;
+        transform: rotate(180deg);
+    }
+}
