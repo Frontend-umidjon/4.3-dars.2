@@ -24,4 +24,4 @@ function updateTimer() {
 setInterval(updateTimer, 1000);
 
 // Initialize the timer display
-1updateTimer();
+updateTimer();
